@@ -1,0 +1,22 @@
+#box1{
+    background-color: blue;
+}
+.heading{
+    color: red;
+}
+button{
+    background-color: green;
+}
+#Box2{
+    h2{
+        color: orange;
+    }
+    p{
+        color: white;
+        background-color: rgb(46, 46, 102);
+    }
+    button{
+        color: white;
+        background-color: black;
+    }
+}

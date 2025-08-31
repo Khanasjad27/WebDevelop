@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+}
+div{
+    
+    height: 200px;
+    width: 200px;
+    border-radius:  50%;
+    border: 1px solid #6BAB90;
+    border-top: 100px solid #E1F0C4;
+    animation: Rotate 0.5s ease-in-out 0s infinite normal;
+}
+@keyframes Rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg); 
+    }
+    
+}

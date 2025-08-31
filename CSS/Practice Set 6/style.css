@@ -1,0 +1,28 @@
+ul{
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+    /* ya likha hai q ki jobhi list ke aage ya to no. ya to bullet pt wo hat jaaega */
+    text-decoration: none;
+    
+}
+#outer{
+    height: 500px;
+    width: 500px;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center; /*ya jo main axis thi uske center me aake baitgaya i.e left to right*/
+    align-items: center;/* isse top to bottom ke center me aagaya*/
+}
+#inner{
+    height: 200px;
+    width: 200px;
+    background-color:white ;
+}

@@ -1,0 +1,13 @@
+*{
+    background-color: pink;
+}
+div{
+    height:  350px;
+    width: 350px;
+    background-image: url(download.png);
+    background-size: cover;
+    position: fixed;
+    /* fixed kiya hai coz question me bola hai ki image screen pe dikhte rhana chaiya scrool karne ke time bhi */
+    right: 50px;
+    top: 20px;
+}

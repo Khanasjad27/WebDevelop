@@ -1,0 +1,30 @@
+#main{
+    height: 400px;
+    width: 400px;
+    background: orange;
+    border-radius: 50%;
+}
+.c{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+}
+#mouth{
+    height: 70px;
+    width: 200px;
+    background-color: red;
+   border-radius: 0 0 50px 50px;
+   position: absolute;
+   top: 300px;
+   left: 110px;
+}
+#c1{
+    top: 125px;
+    left: 110px
+}
+#c2{
+    top: 125px;
+    left: 250px
+}

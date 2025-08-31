@@ -1,0 +1,24 @@
+*{
+    padding: 0;   /* ya karna sahi rahata hai  */
+    margin: 0;     /* ya karna sahi rahata hai  */
+    color: #ffffff;
+}
+#Navbar{
+    height: 60px;
+    background-color: #0f1111;
+}
+#amazon{
+    color: #f08804;
+    text-decoration: none;
+    font-size: 25px;
+}
+button{
+    background-color: #f08804;
+}
+a{
+    margin-right: 200px; 
+    /* yaha humne margin ka use kiya hai padding ka nahi coz hame ek anchor to another anchor tag ke beach me space chaiye tha and input aur butten ke beach me nahi chaiya tha therefore humne anchor ke right me 200px diya */
+}
+input{
+    color: black;
+}

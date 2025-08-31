@@ -1,0 +1,10 @@
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.borderNColor{
+    border: solid black ;
+    background-color: pink;
+}
