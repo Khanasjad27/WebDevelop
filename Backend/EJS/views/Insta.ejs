@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include("includes/head.ejs") %>
+
 <body>
-    <h1>  Instagram  </h1>
-    <h3>You are at <b><%= username %></b>  Instagram page</h3> 
-    <button> Follow</button>  
+    <h1>Instagram</h1>
+    <h2><%= data.name %></h2>
+    <p>Followers: <%= data.followers %></p>
+    <p>Following: <%= data.following %></p>
+
+    <button>Follow</button>
     <button>Message</button>
 
-    <h2>list of Follower</h2>
-    <% for(let name of follower){ %>
-        <li><%= name %></li>
-    <% } %>
+    <h3>Posts:</h3>
+    <% data.posts.forEach(post => { %>
+        <div>
+            <img src="<%= post.image %>"  />
+            <p>❤️ Likes: <%= post.likes %> | 💬 Comments: <%= post.comments %></p>
+        </div>
+    <% }) %>
+
+    <%- include("includes/fotter.ejs") %>
 </body>
+<script src="/app.js"></script>
 </html>

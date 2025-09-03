@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roller Dice</title>
-</head>
+<%- include("includes/head.ejs") %>
+
 <body>
     <h1>
         Dice Gave value: <%= random  %>
@@ -12,5 +7,7 @@
             <h2>Hurray!! You got 6  & let's your friend try</h2>
         <% } %>
     </h1>
+
+    <%- include("includes/fotter.ejs") %>
 </body>
 </html>
