@@ -7,6 +7,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 
+// method override
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+app.use(express.urlencoded()); /// form ka data aaega usko pass karne keliya
 // Connection building
 // Get the client
 const mysql = require("mysql2");
@@ -58,7 +62,7 @@ let   getRandomUser = () => {
 // };
 // connection.end();
 
-// root 
+// 1. root 
 app.get("/" ,(req,res) =>{
   q = "SELECT count(*) FROM user";
   try{
@@ -73,7 +77,7 @@ app.get("/" ,(req,res) =>{
   };
 });
 
-// FOR ALL DATAS
+//2.FOR ALL DATAS
 app.get("/user", (req,res) =>{
   q = "SELECT * FROM user";
   try{
@@ -86,6 +90,27 @@ app.get("/user", (req,res) =>{
     res.send("Random error happen");
   };
 });
+
+//3(a).  Editing Info at Specific id
+app.get("/user/:id/edit", (req,res) =>{
+  let{ id }= req.params;
+  q = `SELECT * FROM user WHERE id = '${id}'` ;
+  try{
+    connection.query(q, (err,result)=>{
+        if(err) throw err;
+        let user = result[0];
+        res.render("edit.ejs" , {user});
+    });
+  }catch(err){
+    console.log(err);
+    res.send("Random error happen");
+  };
+});
+//3(b). JO UPER EDIT KIYA HAI USKO DATA BASE ME STORE KARNE KELIYA
+app.patch("/user/:id", (req,res) =>{
+  res.send("Updated Responce");
+});
+
 
 app.listen("8080" , () =>{
   console.log("Server is Started");
